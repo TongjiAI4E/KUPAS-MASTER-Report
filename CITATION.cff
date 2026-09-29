@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this technical report, please cite the report below."
+title: "KUPAS MASTER Technical Report and Project Website"
+authors:
+  - name: "KUPAS MASTER Team"
+url: "https://tongjiai4e.github.io/KUPAS-MASTER-Report/"
+repository-code: "https://github.com/TongjiAI4E/KUPAS-MASTER-Report"
+keywords:
+  - experience engineering
+  - tacit knowledge
+  - knowledge acquisition
+  - experience corpora
+  - organizational knowledge
+  - large language models
+  - AI agents
+  - agent skills
+  - retrieval-augmented generation
+  - AI for engineering
+preferred-citation:
+  type: report
+  title: "KUPAS MASTER: Distilling the Tacit Expertise of Master Practitioners into Agent-Ready Experience Corpora"
+  authors:
+    - name: "KUPAS MASTER Team"
+  institution:
+    name: "Shanghai Kupas Technology Co., Ltd. and Tongji University"
+  year: 2026
+  month: 9
+  url: "https://tongjiai4e.github.io/KUPAS-MASTER-Report/assets/reports/KUPAS-MASTER-Technical-Report-EN.pdf"

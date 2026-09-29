@@ -40,10 +40,24 @@
 
 ## 交付状态
 
-完整静态页面保存在 `dist/`，可直接部署。已提供本地预览；未发布线上网址，未修改原平台官网。
+完整静态页面保存在 `dist/`。GitHub Pages 已配置为通过 `../.github/workflows/pages.yml` 自动发布此目录，网站地址为 https://tongjiai4e.github.io/KUPAS-MASTER-Report/ 。具体部署结果以仓库 Actions 和下方线上核验记录为准。
 
 截图和机器可读结果在 `.qa/`；测试脚本在 `scripts/verify.cjs`。测试需安装 Playwright 或指定包含该包的 `NODE_PATH`，浏览器路径可通过 `KUPAS_BROWSER` 配置。
 
 第二轮源文件核验记录在 `.qa/source-verification.json`，保存图表原始缓存、均分/排序校验及来源文件哈希。
 
 第三轮核验记录：`.qa/hero-alpha-verification.json` 为透明 PNG 检查，`.qa/redesign-content-audit.json` 为备份与新版的内容保留检查。视口切换后等待两次动画帧以保证媒体查询布局稳定，再测量溢出。
+
+## GitHub 发布与检索优化检查
+
+日期：2026-09-29。
+
+- 新增中英文 README，覆盖网页中的平台框架、九层技术、七步流程、评测、案例、报告与部署说明。
+- 数字表与图表 JSON 一致，两版 README 的九个维度和七个步骤齐全，本地文件链接均可解析。
+- GitHub About 已更新简介、Pages 主页链接与 17 个相关 Topics。
+- 新增 canonical、Open Graph、Twitter Card、JSON-LD、站点地图、来源索引和 CFF 引用信息。
+- 双语切换同步标题、描述和分享元信息；canonical 保持规范主页地址。
+- 已重新运行完整浏览器验证：16 组检查通过，无页面错误。
+- 两份报告 SHA-256 与上表一致。
+
+维护说明见 [MAINTENANCE.md](MAINTENANCE.md)，检索优化依据与后续建议见 [DISCOVERABILITY.md](DISCOVERABILITY.md)。

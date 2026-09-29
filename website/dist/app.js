@@ -10,8 +10,15 @@ function setLanguage(next,updateUrl=true){
   document.querySelectorAll('[data-en]').forEach(el=>{if(!originalText.has(el))originalText.set(el,el.innerHTML);el.innerHTML=language==='en'?el.dataset.en:originalText.get(el)});
   document.querySelectorAll('[data-lang]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.lang===language)));
   document.querySelectorAll('.current-report').forEach(link=>link.href=reportPaths[language]+(link.dataset.page?'#page='+link.dataset.page:''));
-  document.title=language==='en'?'KUPAS MASTER Technical Report':'老师傅 KUPAS MASTER 技术报告';
-  document.querySelector('meta[name="description"]').content=language==='en'?'KUPAS MASTER: distilling tacit expertise into traceable, reusable, agent-ready experience corpora through nine-layer cognitive corpus construction.':'老师傅 KUPAS MASTER 技术报告：以九层认知语料化技术，将资深从业者的隐性经验转化为可追溯、可复用、面向智能体的经验资产。';
+  document.title=language==='en'?'KUPAS MASTER | Experience Engineering for AI Agents': '老师傅 KUPAS MASTER | 经验工程与 AI 智能体技术报告';
+  const description=language==='en'?'KUPAS MASTER: experience engineering for AI agents. Nine-layer cognitive corpus construction turns tacit knowledge into traceable experience corpora and callable skills. Bilingual reports and RAG evaluation.':'老师傅 KUPAS MASTER：面向 AI 智能体的经验工程平台，以九层认知语料化将隐性知识转化为可追溯经验语料与可调用技能。提供中英文技术报告与 RAG 对比评测。';
+  document.querySelector('meta[name="description"]').content=description;
+  document.querySelector('meta[property="og:title"]').content=document.title;
+  document.querySelector('meta[property="og:description"]').content=description;
+  document.querySelector('meta[property="og:locale"]').content=language==='en'?'en_US':'zh_CN';
+  document.querySelector('meta[property="og:locale:alternate"]').content=language==='en'?'zh_CN':'en_US';
+  document.querySelector('meta[name="twitter:title"]').content=document.title;
+  document.querySelector('meta[name="twitter:description"]').content=description;
   try{localStorage.setItem('kupas-master-language',language)}catch{}
   if(updateUrl&&location.protocol!=='file:'){const url=new URL(location.href);url.searchParams.set('lang',language);history.replaceState(null,'',url)}
   document.dispatchEvent(new CustomEvent('languagechange',{detail:language}));

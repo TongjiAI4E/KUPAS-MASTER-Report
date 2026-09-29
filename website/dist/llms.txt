@@ -1,0 +1,22 @@
+# KUPAS MASTER (老师傅 / LaoShiFu)
+
+> Experience engineering for AI agents. Nine-layer cognitive corpus construction turns tacit practitioner expertise into traceable experience corpora and callable skills.
+
+KUPAS MASTER is developed by Shanghai Kupas Technology Co., Ltd. and Tongji University. This project publishes bilingual technical reports and the report website. The repository contains the website, report PDFs, evaluation figures, and aggregate chart data; platform backend code, model weights, and original business corpora are not included.
+
+## Overview and reports
+
+- [Project website](https://tongjiai4e.github.io/KUPAS-MASTER-Report/): Chinese page with an English language switch.
+- [English overview](https://raw.githubusercontent.com/TongjiAI4E/KUPAS-MASTER-Report/main/README.en.md): Full text covering the framework, nine dimensions, seven-step workflow, evaluation, case study, and citation.
+- [中文项目说明](https://raw.githubusercontent.com/TongjiAI4E/KUPAS-MASTER-Report/main/README.md): 老师傅平台、九层认知语料化、经验工程与评测。
+- [English technical report](https://tongjiai4e.github.io/KUPAS-MASTER-Report/assets/reports/KUPAS-MASTER-Technical-Report-EN.pdf): 38-page report, September 2026.
+- [中文技术报告](https://tongjiai4e.github.io/KUPAS-MASTER-Report/assets/reports/KUPAS-MASTER-Technical-Report-ZH.pdf): 38 页，2026 年 9 月。
+- [Product platform](https://lsf.kupasai.com/): Platform access.
+
+## Evaluation and provenance
+
+The controlled internal evaluation covers 20 practitioner groups, 177 questions, and 531 responses. LLM-scored composite results, equally weighted by practitioner, are 70.63 for the base model, 79.75 for raw-corpus RAG, and 89.58 for KUPAS MASTER. The gain over raw-corpus RAG is 9.83 points. These results describe the evaluated samples and complete experience configuration.
+
+- [Aggregate chart data](https://tongjiai4e.github.io/KUPAS-MASTER-Report/assets/results/results-data.json): Composite scores, dimension means, and practitioner means.
+- [Source mapping](https://github.com/TongjiAI4E/KUPAS-MASTER-Report/blob/main/website/SOURCES.md): Report sections, figure provenance, and metric definitions.
+- [Citation](https://raw.githubusercontent.com/TongjiAI4E/KUPAS-MASTER-Report/main/CITATION.cff): Team, title, institutions, and report URL.
