@@ -61,3 +61,15 @@
 - 两份报告 SHA-256 与上表一致。
 
 维护说明见 [MAINTENANCE.md](MAINTENANCE.md)，检索优化依据与后续建议见 [DISCOVERABILITY.md](DISCOVERABILITY.md)。
+
+## 线上核验
+
+- GitHub Pages 发布成功：[工作流运行 36564111889](https://github.com/TongjiAI4E/KUPAS-MASTER-Report/actions/runs/36564111889)，部署提交 `6c5d143`。
+- 网站：https://tongjiai4e.github.io/KUPAS-MASTER-Report/ ，HTTPS 已启用。
+- 在线交互验证覆盖双语切换、六种视口、九层说明、轮播、触摸、图片放大与 PDF 下载。完整脚本最后一次无 JavaScript 导航遇到瞬时连接中断，独立重试该项后通过。
+- 线上 HTML、JavaScript、CSS、站点地图、来源索引、图表 JSON 和两份 PDF 全部返回 HTTP 200，SHA-256 与部署提交中的 Git 文件字节一致。
+- 两份 PDF 的线上哈希与本文件“原件一致性”表一致；网站文本文件按 Git 保存的 LF 字节核验，避免将 Windows 工作副本的 CRLF 换行误判为内容变化。
+- 无 JavaScript 时中文正文及四个报告下载链接可用。
+- 已检查 GitHub 实际渲染的 README：六张表、全部目录锚点、三个徽章、主体图片与综合得分图均正常，页面显示 “Cite this repository” 入口。
+- 域名根目录 `robots.txt` 当前返回 404，未发现该文件对抓取的限制。此检查不代表搜索引擎已经收录。
+- 本地记录：`.qa/online-publication.json` 保存线上文件哈希；GitHub README 截图及锚点检查记录保存在被忽略的 `../.work/`。
