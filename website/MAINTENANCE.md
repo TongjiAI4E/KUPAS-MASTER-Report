@@ -52,3 +52,9 @@ node website/scripts/verify.cjs
 仓库简介、Topics、搜索与联网检索优化的依据及后续建议见 [DISCOVERABILITY.md](DISCOVERABILITY.md)。
 
 本地 `backups/`、`.work/` 和 `.qa/` 是维护记录，不属于线上部署目录。早期视觉版本的回退备份保留在本地 `backups/` 中；公开仓库的后续版本通过 Git 历史追踪。
+
+## README 品牌横栏
+
+中英文 README 共用 `../.github/assets/brand-header.svg`，以统一白色底板排列库帕思、同济大学和工程智能研究院三个标志，适配 GitHub 深浅主题。SVG 内嵌的是 `dist/assets/brand/` 中原始 PNG 的完整字节，仅进行等比排版。
+
+替换原始标志后，从仓库根目录运行 `node .github/scripts/build-brand-header.cjs` 重建横栏。顶部居中布局参考 [Dify](https://github.com/langgenius/dify) 和 [vLLM](https://github.com/vllm-project/vllm) 的 README。

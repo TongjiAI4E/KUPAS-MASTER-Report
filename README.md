@@ -1,4 +1,10 @@
-# 老师傅 KUPAS MASTER：面向 AI 智能体的经验工程
+<div align="center">
+
+<img src=".github/assets/brand-header.svg" width="760" alt="库帕思 KUPAS · 同济大学 Tongji University · 工程智能研究院 Institute of AI for Engineering">
+
+<h1>老师傅 KUPAS&nbsp;MASTER</h1>
+
+**面向 AI 智能体的经验工程**
 
 **让隐性经验成为智能体的能力。**
 
@@ -13,8 +19,10 @@
 **[项目主页](https://tongjiai4e.github.io/KUPAS-MASTER-Report/) · [产品体验](https://lsf.kupasai.com/) · [中文报告](https://tongjiai4e.github.io/KUPAS-MASTER-Report/assets/reports/KUPAS-MASTER-Technical-Report-ZH.pdf) · [English Report](https://tongjiai4e.github.io/KUPAS-MASTER-Report/assets/reports/KUPAS-MASTER-Technical-Report-EN.pdf)**
 
 <p align="center">
-  <img src="website/dist/assets/brand/master-transparent.png" width="300" alt="老师傅 KUPAS MASTER：将专业经验转化为智能体能力">
+  <img src="website/dist/assets/brand/master-transparent.png" width="260" alt="老师傅 KUPAS MASTER：将专业经验转化为智能体能力">
 </p>
+
+</div>
 
 **老师傅（KUPAS MASTER，也称 LaoShiFu）** 是上海库帕思科技有限公司与同济大学联合开展的经验工程平台。平台以**九层认知语料化**为核心，将工作记录与从业者访谈中的隐性知识、专业判断、行动策略和适用边界，转化为可追溯、可审核、可复用的经验语料与可调用技能，支撑大语言模型（LLM）智能体执行专业任务。
 

@@ -1,4 +1,10 @@
-# KUPAS MASTER: Experience Engineering for AI Agents
+<div align="center">
+
+<img src=".github/assets/brand-header.svg" width="760" alt="KUPAS · Tongji University · Institute of AI for Engineering">
+
+<h1>KUPAS&nbsp;MASTER</h1>
+
+**Experience Engineering for AI Agents**
 
 **Human expertise. Agent-ready.**
 
@@ -13,8 +19,10 @@ Distilling tacit expertise into traceable, reusable experience corpora and calla
 **[Project website](https://tongjiai4e.github.io/KUPAS-MASTER-Report/?lang=en) · [Try the product](https://lsf.kupasai.com/) · [English report](https://tongjiai4e.github.io/KUPAS-MASTER-Report/assets/reports/KUPAS-MASTER-Technical-Report-EN.pdf) · [中文报告](https://tongjiai4e.github.io/KUPAS-MASTER-Report/assets/reports/KUPAS-MASTER-Technical-Report-ZH.pdf)**
 
 <p align="center">
-  <img src="website/dist/assets/brand/master-transparent.png" width="300" alt="KUPAS MASTER: turning professional expertise into AI agent capabilities">
+  <img src="website/dist/assets/brand/master-transparent.png" width="260" alt="KUPAS MASTER: turning professional expertise into AI agent capabilities">
 </p>
+
+</div>
 
 **KUPAS MASTER (老师傅, also known as LaoShiFu)** is an experience engineering platform developed by Shanghai Kupas Technology Co., Ltd. and Tongji University. Its core method, **nine-layer cognitive corpus construction**, turns work records and practitioner interviews into traceable, reviewable, reusable experience corpora and callable skills for large language model (LLM) agents. It captures tacit knowledge, professional reasoning, action strategies, and conditions of use.
 
