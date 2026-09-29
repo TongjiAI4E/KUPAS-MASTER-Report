@@ -51,12 +51,25 @@ async function run(){
   assert.equal(await page.locator('.hero-art-dialog,.hero-art-button,.art-expand').count(),0);
   assert.equal(await page.locator('.hero-artwork').evaluate(el=>!!el.closest('a,button')),false);
   assert.equal(await page.locator('.site-header .partner-logos img').count(),3);
-  assert.equal(await page.locator('.hero-downloads .button-download[download]').count(),2);
+  assert.equal(await page.locator('.hero-report-card .hero-report-download[download]').count(),2);
+  assert.equal(await page.locator('.hero-downloads').count(),0);
+  for(const [i,edition] of ['zh','en'].entries()){
+    const card=page.locator('.hero-report-card').nth(i);
+    const lowerCard=page.locator('#report .report-card').nth(i);
+    const cover=card.locator('.hero-report-cover');
+    await cover.evaluate(el=>el.decode());
+    assert.equal(await cover.getAttribute('src'),await lowerCard.locator('img').getAttribute('src'));
+    assert.equal(await card.locator('h2').innerText(),await lowerCard.locator('h3').innerText());
+    assert.equal(await card.locator('a[download]').getAttribute('href'),await lowerCard.locator('a[download]').getAttribute('href'));
+    assert.match(await cover.getAttribute('src'),new RegExp(`report-preview-${edition}\\.png$`));
+    assert.match(await card.locator('.hero-report-meta').innerText(),/PDF · 38 页 · (7\.6|11\.0) MB/);
+  }
+  checks.push('Hero report cards use the current covers, full report titles, file metadata, and original download URLs');
   assert.equal(await page.locator('.header-inner .partner-logos img').count(),3);
   assert.equal(await page.locator('.partner-strip').count(),0);
   assert.equal(await page.locator('.footer-logos img').count(),2);
   assert.match(await page.locator('.footer-iae').getAttribute('src'),/iae_logo\.png$/);
-  assert.doesNotMatch(await page.locator('.hero-actions,.hero-downloads,.header-product').allTextContents().then(parts=>parts.join(' ')),/[↗↓]/);
+  assert.doesNotMatch(await page.locator('.hero-actions,.hero-reports,.header-product').allTextContents().then(parts=>parts.join(' ')),/[↗↓]/);
   assert.ok(await page.locator('.desktop-nav a').evaluateAll(links=>links.every(link=>Number(getComputedStyle(link).fontWeight)>=600)));
   assert.equal(await page.locator('.result-arrows svg[fill="none"]').count(),2);
   assert.equal(await page.locator('.diagram-connector svg[fill="none"]').count(),2);
@@ -113,6 +126,12 @@ async function run(){
       const overflow=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth}));
       if(overflow.scroll>overflow.width)console.log(await page.evaluate(()=>[...document.querySelectorAll('body *')].filter(el=>{const r=el.getBoundingClientRect();return r.width>0&&r.right>innerWidth&&!el.closest('.results-viewport,dialog')}).map(el=>({tag:el.tagName,class:el.className,right:el.getBoundingClientRect().right,width:el.getBoundingClientRect().width,display:getComputedStyle(el).display,fontSize:getComputedStyle(el).fontSize,text:el.textContent.slice(0,90)})).slice(0,12)));
       assert.ok(overflow.scroll<=overflow.width,`${lang} ${width}px overflow: ${JSON.stringify(overflow)}`);
+      const reports=await page.locator('.hero-report-card').evaluateAll(cards=>cards.map(card=>{
+        const bounds=card.getBoundingClientRect(), cover=card.querySelector('img').getBoundingClientRect();
+        return {top:bounds.top,bottom:bounds.bottom,left:bounds.left,right:bounds.right,coverVisible:cover.width>=52&&cover.height>0,contained:[...card.querySelectorAll('img,h2,p,a')].every(el=>{const r=el.getBoundingClientRect();return r.left>=bounds.left&&r.right<=bounds.right&&r.bottom<=bounds.bottom}),downloadHeight:card.querySelector('a').getBoundingClientRect().height};
+      }));
+      assert.ok(reports.every(card=>card.coverVisible&&card.contained&&card.downloadHeight>=44),`${lang} ${width}px report content: ${JSON.stringify(reports)}`);
+      assert.ok(width>800?reports[0].top===reports[1].top&&reports[0].right<reports[1].left:reports[0].bottom<reports[1].top,`${lang} ${width}px report layout: ${JSON.stringify(reports)}`);
       const masthead=await page.locator('.header-inner').evaluate(header=>{
         const brand=header.querySelector('.brand').getBoundingClientRect(),logos=header.querySelector('.partner-logos').getBoundingClientRect();
         return {rightOfBrand:logos.left>brand.right,aligned:Math.abs((logos.top+logos.bottom-brand.top-brand.bottom)/2)<2,height:header.getBoundingClientRect().height};
@@ -137,8 +156,11 @@ async function run(){
       }
       await page.locator('[data-slide="0"]').click();
       if(width===1440||width===390){
+        await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
+        await settle();
         await page.screenshot({path:path.join(qa,`${lang}-${width}-full.png`),fullPage:true});
         await page.screenshot({path:path.join(qa,`${lang}-${width}-hero.png`)});
+        await page.locator('.hero-reports').screenshot({path:path.join(qa,`${lang}-${width}-hero-reports.png`),style:'.site-header,.skip-link{visibility:hidden}'});
         await page.locator('.site-header').screenshot({path:path.join(qa,`${lang}-${width}-header.png`)});
         await page.locator('#overview').screenshot({path:path.join(qa,`${lang}-${width}-overview.png`),style:'.site-header,.skip-link{visibility:hidden}'});
         await page.locator('#workflow').screenshot({path:path.join(qa,`${lang}-${width}-workflow.png`),style:'.site-header,.skip-link{visibility:hidden}'});

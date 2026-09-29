@@ -36,6 +36,7 @@
 - 配色：https://tongjiai4e.github.io/ICAI4E-Workshop/ 。核对其公开 `styles.css`：深蓝 `#051b3b`、金色 `#936522`、浅金 `#edbf7f`、香槟色 `#d6c29f`、暖白 `#f6f5f1`。
 - 当前首屏主体基于 `https://lsf.kupasai.com/login-bg.png`，使用内置 imagegen 提取并重建人物、云朵、光轨与底座，保存为真实 alpha 透明 PNG。原图留存作为来源，页面不再引用整张背景图。宣传语为可选择的双语 HTML，光晕由 CSS 构成；主体图按最新修改意见仅作展示，不提供点击放大。详见 `HERO-ASSET.md`。
 - 原首屏 KM / 01 技术图移入独立产品框架区域，使用原生 HTML/CSS 表达报告内容。
+- 首屏报告卡片复用页面下方报告区的真实封面、完整标题及文件信息。布局参考 [Apple 官网](https://www.apple.com/) 的留白与信息层级，采用白色圆角卡片、浅灰背景和蓝色文字链接，桌面并排、手机堆叠；没有引入 Apple 的品牌资产。
 - 三个机构标志逐字节复制自用户提供的 `E:/Projects/KupasMaster.latex/logo/`，保持原有配色与比例，在页眉同一行的右侧排列，不单独占行；页脚在原库帕思标志右侧同时展示工程智能研究院标志。
 
 ## 第二轮实验图
