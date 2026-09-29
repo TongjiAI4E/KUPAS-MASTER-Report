@@ -1,0 +1,206 @@
+{
+  "scope": "Internal LLM-scored evaluation; equal weight per practitioner. All source files read only.",
+  "composite": {
+    "source": "main_results_cn.tex, Table 7",
+    "series": [
+      "A",
+      "B",
+      "C"
+    ],
+    "values": [
+      70.63,
+      79.75,
+      89.58
+    ],
+    "gainCB": 9.83
+  },
+  "dimensions": {
+    "source": "figs/illustration/fig2_dimension_means.pptx, ppt/charts/chart1.xml",
+    "categories": [
+      "Result correctness",
+      "Output actionability",
+      "Depth of\nprofessional\njudgment",
+      "Evidence sufficiency\nand accuracy",
+      "Appropriate tool\nand skill use",
+      "Accuracy in\nunderstanding\nrequirements",
+      "Boundaries and compliance"
+    ],
+    "series": [
+      "A",
+      "B",
+      "C"
+    ],
+    "values": [
+      [
+        73.914,
+        74.5645,
+        70.567,
+        62.184,
+        59.807,
+        77.176,
+        74.52
+      ],
+      [
+        83.0135,
+        80.8755,
+        79.6715,
+        77.269,
+        73.3645,
+        82.1295,
+        79.1915
+      ],
+      [
+        91.1605,
+        90.765,
+        89.4665,
+        88.321,
+        87.747,
+        89.915,
+        88.225
+      ]
+    ]
+  },
+  "practitioners": {
+    "source": "figs/illustration/fig1_overall_by_master.pptx, ppt/charts/chart1.xml",
+    "originalCategories": [
+      "Corporate account manager (3838)",
+      "Community Party secretary (3571)",
+      "Lymphoma department head (4072)",
+      "Quality and safety oversight (4079)",
+      "Fire investigation (3297)",
+      "Quality expert (3711)",
+      "Injury dispute mediator (3637)",
+      "JZ fund analysis (3695)",
+      "Pipeline welding (3554)",
+      "Yard planning (3684)",
+      "Safety manager (3860)",
+      "Accountant (3557)",
+      "Audit risk control (3991)",
+      "Procurement specialist (3866)",
+      "Industrial park wastewater (4075)",
+      "Wealth adviser (3602)",
+      "Flood / typhoon response (3930)",
+      "Annual-report audit (4008)",
+      "Management accounting (3897)",
+      "Traffic officer (3556)"
+    ],
+    "zh": [
+      "对公客户经理",
+      "社区党总支书记",
+      "淋巴瘤科负责人",
+      "工程质量安全监管",
+      "火灾事故调查",
+      "质量专家",
+      "工伤纠纷调解",
+      "JZ 基金分析",
+      "管道焊接",
+      "场站规划",
+      "安全管理",
+      "会计",
+      "审计风控",
+      "供应商采购",
+      "园区污水纳管",
+      "理财顾问",
+      "城市防汛防台",
+      "年报审计",
+      "管理会计",
+      "资深交警"
+    ],
+    "en": [
+      "Corporate account manager",
+      "Community Party secretary",
+      "Lymphoma department head",
+      "Quality and safety oversight",
+      "Fire investigation",
+      "Quality expert",
+      "Injury dispute mediator",
+      "JZ fund analysis",
+      "Pipeline welding",
+      "Yard planning",
+      "Safety manager",
+      "Accountant",
+      "Audit risk control",
+      "Procurement specialist",
+      "Industrial park wastewater",
+      "Wealth adviser",
+      "Flood / typhoon response",
+      "Annual-report audit",
+      "Management accounting",
+      "Traffic officer"
+    ],
+    "series": [
+      "C",
+      "B",
+      "A"
+    ],
+    "values": [
+      [
+        91.6,
+        91.36,
+        91.3,
+        91.2,
+        90.99,
+        90.69,
+        90.58,
+        90.53,
+        90.11,
+        89.75,
+        89.7,
+        89.67,
+        89.66,
+        88.8,
+        88.54,
+        88.05,
+        87.76,
+        87.43,
+        87.05,
+        86.92
+      ],
+      [
+        83.6,
+        81.33,
+        80.78,
+        84.24,
+        80.46,
+        80.67,
+        80.8,
+        80.81,
+        80.54,
+        80.3,
+        81.05,
+        80.16,
+        81.15,
+        77.83,
+        76.69,
+        76.01,
+        77.2,
+        80.22,
+        74.63,
+        76.56
+      ],
+      [
+        74.7,
+        75.26,
+        71.24,
+        77.93,
+        71.46,
+        67.67,
+        73.34,
+        74.54,
+        71.3,
+        64.66,
+        76.6,
+        68.71,
+        69.1,
+        63.63,
+        63.49,
+        71.61,
+        70.04,
+        71.56,
+        66.72,
+        68.96
+      ]
+    ],
+    "derivedFigure": "C minus B from the reported, rounded practitioner means; two decimal places."
+  }
+}

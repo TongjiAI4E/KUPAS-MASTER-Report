@@ -1,0 +1,9 @@
+# Transparent hero illustration
+
+Generated with the built-in image_gen tool from the original KUPAS MASTER login background, as requested. The generated RGBA alpha channel is preserved without post-processing. The original reference image remains in `dist/assets/brand/login-bg.png` for provenance; the page uses `dist/assets/brand/master-transparent.png`.
+
+All titles, logos, captions, surrounding light, and controls are separate HTML/CSS or supplied logo assets. The PNG contains the character, cloud, orbits, and pedestal without typography.
+
+## Final prompt
+
+Use case: background-extraction. Asset type: transparent PNG hero illustration for the KUPAS MASTER website. Edit the reference image: extract and carefully reconstruct ONLY the central 3D master-practitioner character, blue cloud, surrounding luminous orbital ribbons with small spheres, and blue-and-silver circular pedestal as ONE high-resolution isolated composition. Preserve the same elderly friendly male character with swept-back gray hair, glasses, blue suit and pointing gesture, the cyan-blue translucent cloud with small holographic panels, the orbital paths and pedestal perspective. Keep the reference's refined soft 3D materials and blue/cyan palette. Remove the entire pale-blue background, all flat backdrop circles and floor/grid lines outside the pedestal, ALL logos, ALL titles and ALL text. Center the isolated composition tightly in a roughly square canvas with comfortable transparent margin around every outer edge. The complete orbit and pedestal must fit without clipping. Background must be truly transparent alpha, including the open spaces between orbit rings; no white matte, no checkerboard painted into the image, no rectangular background, no text or watermark. The result will be integrated on both white and light-gray web sections; preserve smooth clean translucent edges. Generate as a transparent PNG at high resolution.
