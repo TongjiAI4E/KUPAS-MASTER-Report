@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src=".github/assets/brand-header.svg" width="760" alt="KUPAS · Tongji University · Institute of AI for Engineering">
-
 <h1>KUPAS&nbsp;MASTER</h1>
 
 **Experience Engineering for AI Agents**
@@ -20,6 +18,12 @@ Distilling tacit expertise into traceable, reusable experience corpora and calla
 
 <p align="center">
   <img src="website/dist/assets/brand/master-transparent.png" width="260" alt="KUPAS MASTER: turning professional expertise into AI agent capabilities">
+</p>
+
+<p align="center">
+  <img src=".github/assets/kupas-mark.svg" width="144" height="64" alt="KUPAS">
+  &nbsp;
+  <img src=".github/assets/tongji-iae-mark.svg" width="170" height="64" alt="Tongji University · Institute of AI for Engineering">
 </p>
 
 </div>

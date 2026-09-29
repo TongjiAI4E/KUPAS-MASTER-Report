@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src=".github/assets/brand-header.svg" width="760" alt="库帕思 KUPAS · 同济大学 Tongji University · 工程智能研究院 Institute of AI for Engineering">
-
 <h1>老师傅 KUPAS&nbsp;MASTER</h1>
 
 **面向 AI 智能体的经验工程**
@@ -20,6 +18,12 @@
 
 <p align="center">
   <img src="website/dist/assets/brand/master-transparent.png" width="260" alt="老师傅 KUPAS MASTER：将专业经验转化为智能体能力">
+</p>
+
+<p align="center">
+  <img src=".github/assets/kupas-mark.svg" width="144" height="64" alt="库帕思 KUPAS">
+  &nbsp;
+  <img src=".github/assets/tongji-iae-mark.svg" width="170" height="64" alt="同济大学 · 工程智能研究院">
 </p>
 
 </div>
