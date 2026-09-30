@@ -279,6 +279,12 @@ p{overflow-wrap:break-word}
 .deployment-note h3{font-size:1.5rem;margin-bottom:12px}
 .deployment-note p{font-size:1rem;color:var(--muted);line-height:1.85}
 .deployment-note .button{margin-left:auto;flex-shrink:0}
+.citation{margin-top:70px}
+.citation h3{font-size:1.5rem;margin-bottom:24px}
+.citation-code{margin:0;padding:28px 32px;border:1px solid var(--line);border-radius:20px;background:var(--white);color:var(--ink);font:.875rem/1.8 ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;white-space:pre-wrap;overflow-wrap:anywhere;tab-size:2}
+.citation-code code{font:inherit}
+@media(max-width:800px){.citation{margin-top:48px}.citation-code{padding:24px}}
+@media(max-width:550px){.citation{margin-top:40px}.citation h3{font-size:1.3125rem;margin-bottom:20px}.citation-code{padding:20px 18px;font-size:.8125rem}}
 .site-footer{background:var(--surface);padding:8px 0 32px}
 .footer-main{display:flex;align-items:center;justify-content:space-between;gap:25px;border-top:1px solid var(--line);padding-top:33px;padding-bottom:26px}
 .footer-main img{width:220px;height:auto}
