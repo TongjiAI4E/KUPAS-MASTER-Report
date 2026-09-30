@@ -177,13 +177,14 @@ Report errors, translation suggestions, and website issues through [Issues](http
 ## Citation
 
 ```bibtex
-@techreport{kupasmaster2026,
-  title       = {{KUPAS MASTER}: Distilling the Tacit Expertise of Master Practitioners into Agent-Ready Experience Corpora},
-  author      = {{KUPAS MASTER Team}},
-  institution = {Shanghai Kupas Technology Co., Ltd. and Tongji University},
-  year        = {2026},
-  month       = {9},
-  url         = {https://tongjiai4e.github.io/KUPAS-MASTER-Report/}
+@misc{wang2026kupasmasterdistillingtacit,
+      title={KUPAS MASTER: Distilling the Tacit Expertise of Master Practitioners into Agent-Ready Experience Corpora}, 
+      author={Changmian Wang and Yuchao Ma and Xuchao Lu and Chen Zhang and Ping Sun and Jiazheng Wang and Shan Wang and Xuanwen Chen and Yihe Sun and Ziyu Lu and Jianqiang Huang and Hongzhi Li and Ziqing Xia and Kaihua Tang and Xian-Sheng Hua and Qinghua Zheng},
+      year={2026},
+      eprint={2609.37673},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2609.37673}, 
 }
 ```
 
